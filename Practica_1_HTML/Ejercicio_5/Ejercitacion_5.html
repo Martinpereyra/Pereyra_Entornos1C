@@ -1,0 +1,25 @@
+<html>
+
+   <head>
+      <title>HTML Frames</title>
+   </head>
+	
+   <frameset rows = "25%,50%,25%">
+   
+    <frameset cols="75%,25%">
+        <frame name="encabezado" src="frames/encabezado.html"/>
+        <frame name="logo" src="frames/logo.html"/>
+    </frameset>
+    <frameset cols="25%,75%">
+        <frame name="menu" src="frames/menu.html"/>
+        <frame name="principal" src="frames/principal.html"/>
+    </frameset>
+    <frame name="pie" src="frames/pie.html"/>
+   
+      <noframes>
+         <body>Your browser does not support frames.</body>
+      </noframes>
+      
+   </frameset>
+   
+</html>

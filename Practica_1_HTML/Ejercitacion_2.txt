@@ -1,0 +1,80 @@
+2.a)
+<!-- Código controlado el día 12/08/2009 -->
+
+Este elemento esta compuesto por los dos tags que permiten insertar un comentario que solo sera visible en el codigo fuente.
+El contenido es el comentario. No es obligatorio utilizarlo.
+
+2.b)
+<div id="bloque1">Contenido del bloque1</div>
+
+ La etiqueta <div> Sirve para crear secciones o agrupar contenidos. En este caso contiene el texto "Contenido del bloque".
+ Tiene un atributo id que le da un nombre al elemento que lo diferencia de todos los demás del documento "bloque1". No es obligatorio
+
+
+ 2.c)
+ <img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" longdesc="detalles.htm" />
+
+ El elemento de imagen HTML <img> representa una imagen en el documento. Este elemento presenta varios atributos ellos son:
+  src: La URL de la imagen. Este atributo es obligatorio para el elemento <img>
+  alt: Este atributo define el texto alternativo que describe la imagen. Su contenido es "lugar imagen"
+  id: idem 2b. El id de este elemento es "im1"
+  name: El nombre para el elemento. Este atributo se encuentra desaprobado en html 4 y obsoleto en html 5. Reemplazado por id
+  width: El ancho de la imagen en píxeles. Su contenido es 32
+  height: La altura de la imagen en píxeles. Su contenido es 32
+  longdesc: La URL como descripción de una imagen mostrada, complementa al texto de alt
+
+  2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" />
+
+En estos dos elementos se encuentra la etiqueta <meta> que sirve para aportar información sobre el documento. Está definido como elemento de cabecera.
+En el primer elemento sus atributos son:
+  name: mombre al que se asocia la metainformación. En este caso es "keywords"
+  lang: información sobre el idioma del contenido del elemento y del valor de sus atributos.
+  content: Los datos que se quieren asociar a "keywords".
+En el segundo elemento:
+  http-equiv: aporta información sobre los encabezado de respuesta HTTP, puede usarse en lugar de name.
+  content: idem primer elemento.
+
+
+  2.e)
+  <a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a>
+
+  El Elemento HTML Anchor <a> crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL. El contenido que se muestra es Resumen HTML y sus atributos:
+    href: Contiene una URL o un fragmento de URL al cual apunta el enlace. Valor en este caso "http://www.e-style.com.ar/resumen.html". Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición.
+    type: Especifica el tipo de medio (media type) en la forma de MIME type para la URL enlazada.
+    hreflang: Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo.
+    charset: Este atributo define la codificación de caracteres (character encoding) de la URL enlazada. Atributo obsoleto en HTML5
+    rel: Especifica la relación del objeto de destino con el objeto de enlace.
+
+    2.f)
+    <table width="200" summary="Datos correspondientes al ejercicio vencido">
+    <caption align="top"> Título </caption>
+    <tr>
+    <th scope="col">&nbsp;</th>
+    <th scope="col">A</th>
+    <th scope="col">B</th>
+    <th scope="col">C</th>
+    </tr>
+    <tr>
+    <th scope="row">1º</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    <tr>
+    <th scope="row">2º</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    </tr>
+    </table>
+
+Este elemento es una tabla que representa datos en dos o mas dimensiones.
+Comienza con una etiqueta <table> que tiene como atributos width mencionado anteriormente y un atributo summary que define un texto alternativo para describir una tabla en un usuario incapaz de mostrarlo.
+Dentro de la etiqueta table se encuentran varias etiquetas cada una con sus atributos especificos:
+  <caption> : Es el encargado de darle un título descriptivo a las tablas. Tiene como atributo align que indica la alineación en relación a la tabla, y el titulo de la tabla es "Titulo".
+  <tr>: define una fila de celdas en una tabla. Estas pueden ser una mezcla de elementos <td> y <th>.
+    <td>: define la celda de una tabla que contiene datos.
+    <th>: define una celda como la cabecera de una columna en una tabla
+    El atributo scope es un grupo de celdas para las cuales esta celda brinda información de encabezado. En este caso col: todas la celdas en la misma columna.

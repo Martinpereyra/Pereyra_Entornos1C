@@ -1,0 +1,58 @@
+3.a)
+
+  1 <a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+  En este caso se muestra el texto "Click aquí para ir a Google" como hipervinculo el cual nos redirecciona a http://www.google.com.ar
+
+  2 <a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+  Realiza lo mismo que el anterior item solo que esta vez al clickear nos abre la web en una nueva pestaña
+
+  3 <a href="http://www.google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+  En este caso no se visualizara nada en la página web ya que este elemento no tiene una etiqueta de cierre ni contenido.
+
+  4 <a href="#">Click aquí para ir a Google</a>
+  Este elemento muestra un hipervinculo con el texto "Click aquí para ir a Google" que utiliza un fragmento vacío para enlazar a la parte superior de la página actual.
+
+  5 <a href="#arriba">Click aquí para volver arriba</a>
+  Realiza la misma función que el anterior item
+
+  6 <a name="arriba" id="arriba"></a>
+  No realiza ninguna acción ya que no tiene contenido, este elemento solo usa un atributo obsoleto name y le asiga un id al elemento.
+
+
+  3.b)
+  1 <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+  En un mismo parrafo muestra una imagen "im1.png" o un texto alternativo si no se encuentra, y un hipervinculo "Click aquí" que redirecciona a Google
+
+  2 <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+  En un mismo parrafo muestra una imagen que el clickearla nos redirecciona a Google y a su vez muestra un texto "Click Aquí"
+
+  4 <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+  En un mismo parrafo muestra una imagen y un hipervinculo que al clickearlos nos lleva a la página de Google
+
+  5 <p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a href="http://www.google.com.ar">Click aquí</a></p>
+  Realiza lo mismo que el item anterior solo que esta vez se podría cambiar la url a la cual direcciona ya que usan dos etiquetas <a> individuales.
+
+
+3.c) Primera columna muestra una lista con viñetas con los items xxx, yyy, zzz
+     En la segunda columna muestra una lista numerada con los mismos elementos.
+     La tercera columna muestra los mismos elementos pero crea tres listas individuales y asigna los valores de los indices.
+     En la ultima columna crea una cita en bloque y escribe el contenido de la lista dentro de un parrafo.
+
+
+3.d)  En la primer tabla hace empleo de la etiqueta <th> que define una celda cabecera. En la segunda tabla a una celda normal le agrega atributos tales como centrado y letra negrita.
+
+3.e) El título de la primer tabla se lo da la etiqueta <caption> mientras que en la segunda tabla se hace en una celda con atributos separada por un div.
+
+3.f) Ambas tablas tienen la misma estructura, la unica diferencia es el espaciado entre celdas (la primera esta espaciada por defecto y en la segunda se le asigna 0 a los atributos de padding y spacing)
+
+3.h) El primer y tercer formulario utilizan fieldset que permite organizar en grupos los campos de un formulario mientras que el segundo formulario utiliza labels. Otra diferencia esta en los metodos HTTP
+     que se utilizan y  la accion que realizan en cada formulario(POST/GET;action.php, mailto, etc)
+
+3.i) En el primer caso tenemos un elemento que muestra un boton que contiene una imagen con las dimensiones dadas en los atributos y un texto. todo esto esta dentro de un label.
+     En el segundo elemento  tenemos un label con un texto y un boton que, a diferencia del anterior elemento, solo muestra un texto.
+
+
+3.j) Son dos opciones las cuales aparecen con una seleccion de tipo radio. La diferencia esta en el atributo name, al ser diferentes en el segundo caso permite seleccionar ambas lo cual es incorrecto si estuvieramos
+hablando de una sola lista del tipo radio.
+
+3.k) En ambos casos se muestra un menu con dos grupos de opciones. La diferencia radica en que en el segundo caso podemos seleccionar multiples opciones de ese menu debido al atributo multiple
