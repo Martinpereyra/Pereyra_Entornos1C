@@ -1,0 +1,215 @@
+Ejercitacion 1:
+1) CSS es un lenguaje utilizado en la presentación de documentos HTML. Es un mecanismo complementario del lenguaje HTML que permite indicarle al navegador el estilo que 
+debe darle a los distintos elementos al desplegar la información de un sitio web. Mientras que los comandos HTML le indican al navegador que ciertas partes del texto son títulos, 
+subtítulos, enlaces o párrafos, CSS es lo que le dice, entre otras cosas, qué fuente, tamaño, color o alineación debe tener un elemento de la página. etc.
+
+2) Se asigna una propiedad a un selector a fin de manipular su estilo. Ejemplos de propiedades incluyen color, margin, y font.
+El valor de declaración es la asignación que recibe la propiedad. Por ejemplo, la propiedad color podría recibir el valor red (rojo). Por ejemplo:
+h1 {
+color: red; 
+text–align: center;
+}
+Le estamos indicando al navegador que despliegue el Título 1 del documento en color rojo y centrado.
+
+3) Hay tres formas de aplicar estilos CSS en un documento HTML:
+    1. CSS en línea: los estilos en línea son declaraciones CSS que se integran en las etiquetas HTML mediante el atributo style. Este método tan solo afecta al elemento en el que se integra el código.
+    2. CSS incrustado en la cabecera: otra manera muy simple de añadir estilo con CSS es utilizando la etiqueta <style> en la cabecera <head> del fichero HTML del sitio.
+    3. CSS en hojas de estilo externas: mediante hojas de estilo externas se consigue separar el archivo de estilos del fichero HTML. El archivo de estilos cuenta con la extensión .css y se referencia desde HTML mediante el elemento <link>. Este es el método recomendado para aplicar estilos a una página web.
+
+4) CSS se compone de dos partes. Una parte llamada "selector" y otra parte llamada "declaración". La declaración indica "qué hay que hacer" y el selector indica "a quién hay que hacérselo". 
+Por lo tanto, los selectores son imprescindibles para aplicar de forma correcta los estilos CSS en una página.
+    1. Selector universal: se utiliza para seleccionar todos los elementos de la página y se indica mediante un asterisco (*). No se utiliza habitualmente, ya que es difícil que un mismo estilo se pueda aplicar a todos los elementos de una página.
+    Ejemplo: * {
+                margin: 0;
+                padding: 0;
+                }
+    2. Selector de tipo o etiqueta: selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector. El siguiente ejemplo selecciona todos los párrafos de la página.
+    Ejemplo: p {
+                color: red; 
+                }
+             h1, h2, h3 {
+             color: #AA8020;
+             font-weight: normal; 
+             }
+             font-family: Arial, Helvetica, sans-serif;
+             }
+    3. Selector descendente: los selectores descendentes permiten aumentar la precisión del selector de tipo o etiqueta. Selecciona los elementos que se encuentran dentro de otros elementos.
+    Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de apertura y de cierre del otro elemento.
+    Ejemplo: p span  { color: red;  
+               }
+              h1 span { color: blue; 
+              }
+    4. Selector de clase: para que el navegador no confunda este selector con los otros tipos de selectores, se prefija el valor del atributo class con un punto (.).
+    El selector .destacado se interpreta como "cualquier elemento de la página cuyo atributo class sea igual a destacado", por lo que solamente el primer párrafo cumple esa condición.
+    Ejemplo: .destacado { color: red; 
+              }
+              
+    5. Selectores de ID: El selector de ID permite seleccionar un elemento de la página a través del valor de su atributo id.
+    Ejemplo: #destacado { color: red; }
+              p#aviso { color: blue; }
+              
+5) Una pseudoclase CSS es una palabra clave que se añade a los selectores y que especifica un estado especial del elemento seleccionado. 
+Por ejemplo,  :hover aplicará un estilo cuando el usuario haga hover sobre el elemento especificado por el selector.
+
+6) CSS permite que estilos definidos para los elementos se heredan de forma automática entre sus elementos descendientes o hijos. Por ejemplo:
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejemplo de herencia en css</title>
+<style type="text/css">
+/* Comentario en CSS una sola línea */
+  		body { color: blue; }
+</style>
+</head>
+
+<body>
+  <h1>Titular de la página</h1>
+  <p>Un párrafo de texto no muy largo.</p>
+</body>
+</html>
+En las propiedades de estilo de este ejemplo el definimos el color del texto para el elemento <body> usando el selector body. Lo interesante es que salvo que indiquemos 
+lo contrario todos los elementos hijos que desciendan de este selector heredarán la propiedad color. Esta herencia de estilos se aplica automáticamente y para anularla sobre otro elemento debemos crear una regla explícita con otro valor.
+
+7) El formato final de cualquier elemento depende de la combinación de todas las propiedades que afectan al elemento. La denominación de hojas de estilo en
+cascada hace referencia precisamente a este hecho. Por ejemplo, una de esas reglas es que a un elemento le afectan todas las propiedades de los elementos en los que está incluido.
+
+
+Ejercitacion 2:
+
+p#normal {
+          font-family: arial,helvetica;
+          font-size: 11px;
+          font-weight: bold;
+          }
+//Aquí el selector (párrafo) con id "normal" indica que todos los elementos del párrafo se verán afectados por la declaración donde se establece que la propiedade font-family (familia de fuentes)
+va a tener los valores de arial y helvetica, la proiedad font-size con valor de 11px es decir su tamaño de letra y un font-weight con valor en negrita.
+          
+*#destacado {
+             border-style: solid;
+             border-color: blue;
+             border-width: 2px;
+             }
+//Aquí el selector tabla "destacado" está afectado por la declaración que establece la propiedad border-style con un valor "solid" que indica que la tabla estará bordeado
+por una linea continua, el color del borde será azul y tendrá un espesor de 2px.
+
+#distinto {
+          background-color: #9EC7EB;
+          color: red;
+          }
+//Aquí el selector párrafo con id "normal" estará afectado por las propiedades background-color con un valor "#9EC7EB", es decir un fondo con color azul clarito y por la propiedad
+color con un valor red (rojo) que indica que el color de la letra será rojo. En definitiva será un texto con fondo azul claro y letra roja.
+
+<p id="normal">Este es un párrafo</p> //Párrafo con id "normal"
+<p id="destacado">Este es otro párrafo</p> //Párrafo con id "destacado"
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table> //Tabla con id "destacado"
+<p id="distinto">Este es el último párrafo</p> //Párrafo con id "distinto"
+
+Ejercitacion 3:
+
+p.quitar {
+         color: red;
+         }
+//Selector <p> con id="quitar" indica la propiedad color con valor red, es decir, que el parrafo de la clase "quitar" estará con letra color rojo.          
+          
+*.desarrollo {
+            font-size: 8px;
+            }
+//Todos los elementos de la clase="desarrollo" le indican la propiedad de font-size con un valor de 8px, es decir que tengan un tamaño de letra de 8px            
+            
+.importante {
+            font-size: 20px;
+            }
+//Todos elementos de la clase="importante" le asignan la propiedad font-size con un valor de 20px, es decir que tengan un tamaño de letra de 20px
+
+<p class="desarrollo"> 
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+//declaración del párrafo de clase "desarrollo"
+
+
+<p class="quitar">
+Este párrafo debe ser quitado de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+//declaración del párrafo de clase "quitar"
+
+
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+//Otro párrafo sin clase
+
+
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+//Declaración de párrafo de clase "importante"
+
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1> //Título de clase "quitar"
+
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p> //Párrafo de clase "quitar" y clase "importante"
+
+Ejercitacion 4:
+Aquí comparando ambos códigos resulta claro que en el segundo código se declara el body como clase "contenido" por eso en las declaraciones se verá afectado por el selector
+".contenido" que selecciona todos los elementos de la clase contenido y le otorga las propiedades font-size con valor 14px y font-weight con valor bold, es decir que 
+todos los elementos (textos) de dicho código tendrán un tamaño de letra de 14 px y estarán en negrita. El primer código no se verá afectado por esta declaración ya que 
+no se le declara la clase "contenido" al body.
+
+Ejercitacion 5:
+1) h1,h2,h3,h4,h5,h6 {color: red}
+
+2) p [href] {color: black}
+
+3) ul #ultimo {color: yellow}
+    ul:link {color: blue}
+
+4) #importante {color: green}
+    h1,h2,h3,h4,h5,h6 #importante {color: red}
+
+5) h1[title] {color: blue}
+
+6) ol:link {color: blue;
+            text-decoration: none
+            }
+   ol:visited {color: purple;
+              text-decoration: none;
+              }
+              
+Ejercitacion 6:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REChtml401-19991224/loose.dtd">
+<HTML lang=es xmlns="http://www.w3.org/1999/xhtml">
+<LINK REL=StyleSheet HREF="estilo2.css" TYPE="text/css" MEDIA=screen> //enlazándose a una hoja de estilo externa
+<HEAD><TITLE>Página Principal</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"></META>
+</HEAD>
+<BODY>
+<DIV id=titulo><H1>ASIGNATURA ELECTIVA</H1></DIV>
+<DIV id=contenido>
+<H2>Contenido</H2>
+<p>En esta asignatura ...........................<BR></p>
+<P>El objetivo fundamental ..................</P>
+<P>etc., etc., ...........................................</P>
+<P>etc., etc., ...........................................</P>
+<P>Adem&aacute;s, ...........................................</P>
+<P>etc., etc., ...........................................</P>
+<P class="resaltado">Pero, lo más importante es ..............................</P>
+<P class="resaltado">etc., etc., ...........................................</P>
+<P>Y, entonces, podemos continuar con ..................</P>
+<P>etc., etc., ...........................................</P>
+<P>&nbsp;</P>
+</DIV>
+<DIV id=menu class=navBar>
+<H3>Enlaces</H3>
+<UL>
+<LI><A href="http://www.e-style.com.ar/moodle" target=_blank>Curso Actual</A>
+<LI><A href="http://www.e-style.com.ar/logica" target=_blank>Curso anterior</A> </LI>
+<LI><A href="http://www.e-style.com.ar/ntedu/consultas.htm" target=_blank>Contacto</A></LI>
+</UL>
+</DIV>
+<DIV id=pie>Ingeniería en Sistemas de Información - Universidad Tecnológica Nacional Rosario</DIV>
+<p>&nbsp;</p>
+</BODY>
+</HTML>
